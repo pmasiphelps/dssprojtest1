@@ -1,0 +1,324 @@
+{
+  "type": "PostgreSQL",
+  "managed": false,
+  "checklists": {
+    "checklists": []
+  },
+  "customMeta": {
+    "kv": {}
+  },
+  "flowOptions": {
+    "virtualizable": false,
+    "rebuildBehavior": "NORMAL",
+    "crossProjectBuildBehavior": "DEFAULT"
+  },
+  "readWriteOptions": {
+    "preserveOrder": false,
+    "writeBuckets": 1,
+    "forceSingleOutputFile": false,
+    "defaultReadOrdering": {
+      "enabled": false,
+      "rules": []
+    }
+  },
+  "partitioning": {
+    "ignoreNonMatchingFile": false,
+    "considerMissingRequestedPartitionsAsEmpty": false,
+    "dimensions": []
+  },
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1599141986481
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1599141986481
+  },
+  "tags": [],
+  "params": {
+    "writeWithCopyBadDataBehavior": "NOVERIFY_ERROR",
+    "connection": "postgres_dku",
+    "notReadyIfEmpty": false,
+    "mode": "table",
+    "partitioningType": "custom",
+    "normalizeDoubles": true,
+    "table": "WOODSLABS_allsites_slabs_joined",
+    "tableCreationMode": "auto",
+    "writeInsertBatchSize": 10000,
+    "writeJDBCBadDataBehavior": "DISCARD_ROW",
+    "readColsWithUnknownTzAsDates": false,
+    "readSQLDateColsAsDSSDates": true
+  },
+  "schema": {
+    "columns": [
+      {
+        "name": "full_name_id",
+        "type": "string",
+        "originalType": "text"
+      },
+      {
+        "name": "species",
+        "type": "string",
+        "originalType": "text"
+      },
+      {
+        "name": "species_meta",
+        "type": "string",
+        "originalType": "text"
+      },
+      {
+        "name": "id",
+        "type": "string",
+        "originalType": "text"
+      },
+      {
+        "name": "slab_detail_link",
+        "type": "string",
+        "originalType": "text"
+      },
+      {
+        "name": "image",
+        "type": "string",
+        "originalType": "text"
+      },
+      {
+        "name": "thickness",
+        "type": "double",
+        "originalType": "float8"
+      },
+      {
+        "name": "width_min",
+        "type": "double",
+        "originalType": "float8"
+      },
+      {
+        "name": "width_max",
+        "type": "double",
+        "originalType": "float8"
+      },
+      {
+        "name": "length",
+        "type": "double",
+        "originalType": "float8"
+      },
+      {
+        "name": "board_footage",
+        "type": "double",
+        "originalType": "float8"
+      },
+      {
+        "name": "drying_method",
+        "type": "string",
+        "originalType": "text"
+      },
+      {
+        "name": "slab_price",
+        "type": "double",
+        "originalType": "float8"
+      },
+      {
+        "name": "slab_price_ship",
+        "type": "double",
+        "originalType": "float8"
+      },
+      {
+        "name": "board_foot_price",
+        "type": "double",
+        "originalType": "float8"
+      },
+      {
+        "name": "board_foot_price_ship",
+        "type": "double",
+        "originalType": "float8"
+      },
+      {
+        "name": "scrape_time",
+        "type": "date",
+        "originalType": "timestamptz"
+      },
+      {
+        "name": "species_extra",
+        "type": "string",
+        "originalType": "text"
+      },
+      {
+        "name": "species_width_general",
+        "type": "string",
+        "originalType": "text"
+      },
+      {
+        "name": "figure",
+        "type": "string",
+        "originalType": "text"
+      },
+      {
+        "name": "weight_lbs",
+        "type": "double",
+        "originalType": "float8"
+      },
+      {
+        "name": "epoxy_crack_fill",
+        "type": "string",
+        "originalType": "text"
+      },
+      {
+        "name": "in_stock",
+        "type": "string",
+        "originalType": "text"
+      },
+      {
+        "name": "parent_log_species_id",
+        "type": "string",
+        "originalType": "text"
+      },
+      {
+        "name": "parent_log_id",
+        "type": "double",
+        "originalType": "float8"
+      },
+      {
+        "name": "slab_parent_sourced_date",
+        "type": "date",
+        "originalType": "timestamptz"
+      },
+      {
+        "name": "slab_parent_origin",
+        "type": "string",
+        "originalType": "text"
+      },
+      {
+        "name": "width_bottom",
+        "type": "double",
+        "originalType": "float8"
+      },
+      {
+        "name": "width_middle",
+        "type": "double",
+        "originalType": "float8"
+      },
+      {
+        "name": "width_top",
+        "type": "double",
+        "originalType": "float8"
+      },
+      {
+        "name": "avg_width",
+        "type": "double",
+        "originalType": "float8"
+      },
+      {
+        "name": "warehouse_location",
+        "type": "string",
+        "originalType": "text"
+      },
+      {
+        "name": "comments",
+        "type": "string",
+        "originalType": "text"
+      },
+      {
+        "name": "site",
+        "type": "string",
+        "originalType": "text"
+      },
+      {
+        "name": "scrape_time_min",
+        "type": "date",
+        "originalType": "timestamptz"
+      },
+      {
+        "name": "janka_hardness",
+        "type": "bigint",
+        "originalType": "int8"
+      }
+    ],
+    "userModified": true
+  },
+  "metrics": {
+    "probes": [
+      {
+        "type": "basic",
+        "enabled": true,
+        "computeOnBuildMode": "PARTITION",
+        "meta": {
+          "name": "Basic data",
+          "level": 0
+        },
+        "configuration": {}
+      },
+      {
+        "type": "records",
+        "enabled": true,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Record count",
+          "level": 0
+        },
+        "configuration": {}
+      }
+    ],
+    "engineConfig": {
+      "padRunsWithMetrics": false,
+      "hive": {
+        "active": true,
+        "extraConf": []
+      },
+      "basic": {},
+      "dss": {
+        "active": true,
+        "selection": {
+          "useMemTable": false,
+          "filter": {
+            "distinct": false,
+            "enabled": false
+          },
+          "partitionSelectionMethod": "ALL",
+          "latestPartitionsN": 1,
+          "ordering": {
+            "enabled": false,
+            "rules": []
+          },
+          "samplingMethod": "FULL",
+          "maxRecords": -1,
+          "targetRatio": 0.02,
+          "withinFirstN": -1,
+          "maxReadUncompressedBytes": -1
+        }
+      },
+      "sql": {
+        "active": true
+      },
+      "impala": {
+        "active": true
+      },
+      "spark": {
+        "active": true,
+        "extraConf": []
+      },
+      "python": {}
+    },
+    "displayedState": {
+      "columns": [],
+      "metrics": [
+        "basic:COUNT_COLUMNS",
+        "records:COUNT_RECORDS"
+      ]
+    }
+  },
+  "metricsChecks": {
+    "runOnBuild": false,
+    "checks": [],
+    "displayedState": {
+      "checks": []
+    }
+  },
+  "customFields": {
+    "gdpr_contains_personal_data": "UNSURE"
+  }
+}
