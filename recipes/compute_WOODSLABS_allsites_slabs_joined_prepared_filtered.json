@@ -1,21 +1,36 @@
 {
-  "type": "shaker",
+  "type": "sampling",
   "neverRecomputeExistingPartitions": false,
   "optionalDependencies": false,
   "params": {
+    "selection": {
+      "useMemTable": false,
+      "filter": {
+        "distinct": false,
+        "enabled": false
+      },
+      "partitionSelectionMethod": "ALL",
+      "latestPartitionsN": 1,
+      "ordering": {
+        "enabled": false,
+        "rules": []
+      },
+      "samplingMethod": "HEAD_SEQUENTIAL",
+      "maxRecords": 100,
+      "targetRatio": 0.02,
+      "withinFirstN": -1,
+      "maxReadUncompressedBytes": -1
+    },
     "engineParams": {
-      "spark": {
+      "dssEngineMaxThreads": 4,
+      "sparkSQL": {
+        "overwriteOutputSchema": false,
+        "useGlobalMetastore": false,
         "readParams": {
           "mode": "AUTO",
           "autoModeRepartitionInto": 10,
-          "map": {
-            "WOODSLABS_allsites_slabs_joined": {
-              "repartition": 10
-            }
-          }
+          "map": {}
         },
-        "useGlobalMetastore": false,
-        "useNativeProcessors": true,
         "sparkConfig": {
           "inheritConf": "default",
           "conf": []
@@ -25,6 +40,9 @@
         "pipelineAllowMerge": true,
         "skipPrerunValidate": false
       },
+      "impala": {
+        "forceStreamMode": true
+      },
       "hive": {
         "inheritConf": "default",
         "hiveconf": [],
@@ -32,15 +50,11 @@
         "addDkuUdf": false,
         "skipPrerunValidate": false
       },
-      "impala": {
-        "forceStreamMode": true
-      },
-      "hadoopConfigKeys": [],
       "sqlPipelineParams": {
         "pipelineAllowStart": true,
         "pipelineAllowMerge": true
       },
-      "maxThreads": 8
+      "lowerCaseSchemaIfEngineRequiresIt": false
     }
   },
   "customMeta": {
@@ -52,7 +66,7 @@
     "main": {
       "items": [
         {
-          "ref": "WOODSLABS_allsites_slabs_joined",
+          "ref": "WOODSLABS_allsites_slabs_joined_prepared",
           "deps": []
         }
       ]
@@ -62,25 +76,25 @@
     "main": {
       "items": [
         {
-          "ref": "WOODSLABS_allsites_slabs_joined_prepared",
+          "ref": "WOODSLABS_allsites_slabs_joined_prepared_filtered",
           "appendMode": false
         }
       ]
     }
   },
   "versionTag": {
-    "versionNumber": 2,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1599142146628
+    "lastModifiedOn": 1599142191592
   },
   "creationTag": {
     "versionNumber": 0,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1599141993643
+    "lastModifiedOn": 1599142187175
   },
   "tags": [],
   "customFields": {},
