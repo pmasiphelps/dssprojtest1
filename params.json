@@ -122,7 +122,6 @@
     }
   },
   "name": "testmasterbcg1",
-  "projectStatus": "Sandbox",
   "metrics": {
     "probes": [],
     "engineConfig": {
@@ -178,11 +177,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1599142114990
+    "lastModifiedOn": 1599142138801
   },
   "creationTag": {
     "versionNumber": 0,
@@ -192,7 +191,9 @@
     "lastModifiedOn": 1599141947250
   },
   "shortDesc": "The project *testmasterbcg1* was created by pat on Sep 03rd 2020",
-  "tags": [],
+  "tags": [
+    "duplicated"
+  ],
   "customFields": {
     "gdpr_forbid_dataset_sharing": false,
     "gdpr_forbid_dataset_export": false,
