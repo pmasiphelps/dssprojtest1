@@ -121,7 +121,7 @@
       }
     }
   },
-  "name": "testmasterbcg1",
+  "name": "testmasterbcg1 (branch1)",
   "metrics": {
     "probes": [],
     "engineConfig": {
@@ -177,11 +177,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 1,
+    "versionNumber": 2,
     "lastModifiedBy": {
       "login": "admin"
     },
-    "lastModifiedOn": 1599142138801
+    "lastModifiedOn": 1599142141345
   },
   "creationTag": {
     "versionNumber": 0,
@@ -190,7 +190,7 @@
     },
     "lastModifiedOn": 1599141947250
   },
-  "shortDesc": "The project *testmasterbcg1* was created by pat on Sep 03rd 2020",
+  "shortDesc": "The project *testmasterbcg1* was created by pat on Sep 03rd 2020\nThe project *TESTMASTERBCG1_BRANCH1* was copied from *TESTMASTERBCG1* by pat on Sep 03rd 2020",
   "tags": [
     "duplicated"
   ],
