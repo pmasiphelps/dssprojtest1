@@ -8,7 +8,11 @@
         "readParams": {
           "mode": "AUTO",
           "autoModeRepartitionInto": 10,
-          "map": {}
+          "map": {
+            "WOODSLABS_allsites_slabs_joined_prepared_filtered": {
+              "repartition": 10
+            }
+          }
         },
         "useGlobalMetastore": false,
         "useNativeProcessors": true,
@@ -65,11 +69,11 @@
     }
   },
   "versionTag": {
-    "versionNumber": 0,
+    "versionNumber": 1,
     "lastModifiedBy": {
       "login": "ds_no_code"
     },
-    "lastModifiedOn": 1600181363349
+    "lastModifiedOn": 1600181369035
   },
   "creationTag": {
     "versionNumber": 0,
