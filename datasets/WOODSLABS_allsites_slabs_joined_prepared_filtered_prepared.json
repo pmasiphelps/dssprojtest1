@@ -1,0 +1,289 @@
+{
+  "type": "PostgreSQL",
+  "managed": true,
+  "checklists": {
+    "checklists": []
+  },
+  "checks": [],
+  "customMeta": {
+    "kv": {}
+  },
+  "flowOptions": {
+    "virtualizable": false,
+    "rebuildBehavior": "NORMAL",
+    "crossProjectBuildBehavior": "DEFAULT"
+  },
+  "readWriteOptions": {
+    "preserveOrder": false,
+    "writeBuckets": 1,
+    "forceSingleOutputFile": false,
+    "defaultReadOrdering": {
+      "enabled": false,
+      "rules": []
+    }
+  },
+  "partitioning": {
+    "ignoreNonMatchingFile": false,
+    "considerMissingRequestedPartitionsAsEmpty": false,
+    "dimensions": []
+  },
+  "versionTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "ds_no_code"
+    },
+    "lastModifiedOn": 1600181363323
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "ds_no_code"
+    },
+    "lastModifiedOn": 1600181363323
+  },
+  "tags": [],
+  "params": {
+    "writeWithCopyBadDataBehavior": "NOVERIFY_ERROR",
+    "connection": "postgres_dku",
+    "notReadyIfEmpty": false,
+    "mode": "table",
+    "partitioningType": "custom",
+    "normalizeDoubles": true,
+    "table": "${projectKey}_woodslabs_allsites_slabs_joined_prepared_filtered_prepared",
+    "tableCreationMode": "auto",
+    "writeInsertBatchSize": 10000,
+    "writeJDBCBadDataBehavior": "DISCARD_ROW",
+    "readColsWithUnknownTzAsDates": false,
+    "readSQLDateColsAsDSSDates": true
+  },
+  "schema": {
+    "columns": [
+      {
+        "name": "full_name_id",
+        "type": "string"
+      },
+      {
+        "name": "species",
+        "type": "string"
+      },
+      {
+        "name": "species_meta",
+        "type": "string"
+      },
+      {
+        "name": "id",
+        "type": "string"
+      },
+      {
+        "name": "slab_detail_link",
+        "type": "string"
+      },
+      {
+        "name": "image",
+        "type": "string"
+      },
+      {
+        "name": "thickness",
+        "type": "string"
+      },
+      {
+        "name": "width_min",
+        "type": "string"
+      },
+      {
+        "name": "width_max",
+        "type": "string"
+      },
+      {
+        "name": "length",
+        "type": "string"
+      },
+      {
+        "name": "board_footage",
+        "type": "string"
+      },
+      {
+        "name": "drying_method",
+        "type": "string"
+      },
+      {
+        "name": "slab_price",
+        "type": "string"
+      },
+      {
+        "name": "slab_price_ship",
+        "type": "string"
+      },
+      {
+        "name": "board_foot_price",
+        "type": "string"
+      },
+      {
+        "name": "board_foot_price_ship",
+        "type": "string"
+      },
+      {
+        "name": "scrape_time",
+        "type": "string"
+      },
+      {
+        "name": "species_extra",
+        "type": "string"
+      },
+      {
+        "name": "species_width_general",
+        "type": "string"
+      },
+      {
+        "name": "figure",
+        "type": "string"
+      },
+      {
+        "name": "weight_lbs",
+        "type": "string"
+      },
+      {
+        "name": "epoxy_crack_fill",
+        "type": "string"
+      },
+      {
+        "name": "in_stock",
+        "type": "string"
+      },
+      {
+        "name": "parent_log_species_id",
+        "type": "string"
+      },
+      {
+        "name": "parent_log_id",
+        "type": "string"
+      },
+      {
+        "name": "slab_parent_sourced_date",
+        "type": "string"
+      },
+      {
+        "name": "slab_parent_origin",
+        "type": "string"
+      },
+      {
+        "name": "width_bottom",
+        "type": "string"
+      },
+      {
+        "name": "width_middle",
+        "type": "string"
+      },
+      {
+        "name": "width_top",
+        "type": "string"
+      },
+      {
+        "name": "avg_width",
+        "type": "string"
+      },
+      {
+        "name": "warehouse_location",
+        "type": "string"
+      },
+      {
+        "name": "comments",
+        "type": "string"
+      },
+      {
+        "name": "site",
+        "type": "string"
+      },
+      {
+        "name": "scrape_time_min",
+        "type": "string"
+      },
+      {
+        "name": "janka_hardness",
+        "type": "string"
+      }
+    ],
+    "userModified": true
+  },
+  "metrics": {
+    "probes": [
+      {
+        "type": "basic",
+        "enabled": true,
+        "computeOnBuildMode": "PARTITION",
+        "meta": {
+          "name": "Basic data",
+          "level": 0
+        },
+        "configuration": {}
+      },
+      {
+        "type": "records",
+        "enabled": true,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Record count",
+          "level": 0
+        },
+        "configuration": {}
+      }
+    ],
+    "engineConfig": {
+      "padRunsWithMetrics": false,
+      "hive": {
+        "active": true,
+        "extraConf": []
+      },
+      "basic": {},
+      "dss": {
+        "active": true,
+        "selection": {
+          "useMemTable": false,
+          "filter": {
+            "distinct": false,
+            "enabled": false
+          },
+          "partitionSelectionMethod": "ALL",
+          "latestPartitionsN": 1,
+          "ordering": {
+            "enabled": false,
+            "rules": []
+          },
+          "samplingMethod": "FULL",
+          "maxRecords": -1,
+          "targetRatio": 0.02,
+          "withinFirstN": -1,
+          "maxReadUncompressedBytes": -1
+        }
+      },
+      "sql": {
+        "active": true
+      },
+      "impala": {
+        "active": true
+      },
+      "spark": {
+        "active": true,
+        "extraConf": []
+      },
+      "python": {}
+    },
+    "displayedState": {
+      "columns": [],
+      "metrics": [
+        "basic:COUNT_COLUMNS",
+        "records:COUNT_RECORDS"
+      ]
+    }
+  },
+  "metricsChecks": {
+    "runOnBuild": false,
+    "checks": [],
+    "displayedState": {
+      "checks": []
+    }
+  },
+  "customFields": {
+    "gdpr_contains_personal_data": "UNSURE"
+  }
+}
